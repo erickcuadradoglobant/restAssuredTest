@@ -29,7 +29,7 @@ public class AssuredTests {
 	// Assert.assertThat(response.getStatusCode(), Matchers.equalTo(200));
 
 	//}
-	@Test
+	//@Test
 	public void responses200() {
 		String uri ="https://jsonplaceholder.typicode.com/";
 		Response posts = RestAssured.given().accept(ContentType.JSON).get(uri+"posts/");	    	  
@@ -55,11 +55,11 @@ public class AssuredTests {
 
 	}
 
-	//@Test
+	@Test
 	public void schemas() {
 		
 		String uri ="https://jsonplaceholder.typicode.com/";
-		String resource = "C:\\Users\\erick.cuadrado\\eclipse-workspace\\exercise\\rest\\resources\\posts-schema.json";
+		//String resource = "C:\\Users\\erick.cuadrado\\eclipse-workspace\\exercise\\rest\\resources\\posts-schema.json";
 		//Response posts = RestAssured.given().accept(ContentType.JSON).get(uri+"posts/");	
 		 
 		JsonSchemaFactory jsonSchemaFactory = JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(SchemaVersion.DRAFTV4).freeze()).freeze();

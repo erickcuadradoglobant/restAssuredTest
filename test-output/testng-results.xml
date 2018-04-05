@@ -1,32 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="5" passed="4">
+<testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4693" started-at="2018-04-05T22:14:19Z" finished-at="2018-04-05T22:14:24Z">
+  <suite name="Default suite" duration-ms="3126" started-at="2018-04-05T23:42:51Z" finished-at="2018-04-05T23:42:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4693" started-at="2018-04-05T22:14:19Z" finished-at="2018-04-05T22:14:24Z">
+    <test name="Default test" duration-ms="3126" started-at="2018-04-05T23:42:51Z" finished-at="2018-04-05T23:42:54Z">
       <class name="assured1.assured_test.AssuredTests">
-        <test-method status="PASS" signature="comment()[pri:0, instance:assured1.assured_test.AssuredTests@523884b2]" name="comment" duration-ms="1846" started-at="2018-04-05T17:14:19Z" finished-at="2018-04-05T17:14:21Z">
+        <test-method status="PASS" signature="comment()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="comment" duration-ms="1602" started-at="2018-04-05T18:42:51Z" finished-at="2018-04-05T18:42:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- comment -->
-        <test-method status="PASS" signature="responses200()[pri:0, instance:assured1.assured_test.AssuredTests@523884b2]" name="responses200" duration-ms="1321" started-at="2018-04-05T17:14:21Z" finished-at="2018-04-05T17:14:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- responses200 -->
-        <test-method status="FAIL" signature="schemas()[pri:0, instance:assured1.assured_test.AssuredTests@523884b2]" name="schemas" duration-ms="427" started-at="2018-04-05T17:14:22Z" finished-at="2018-04-05T17:14:23Z">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="schemas()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="schemas" duration-ms="498" started-at="2018-04-05T18:42:53Z" finished-at="2018-04-05T18:42:53Z">
+          <exception class="io.restassured.module.jsv.JsonSchemaValidationException">
             <message>
-              <![CDATA[Schema to use cannot be null]]>
+              <![CDATA[com.github.fge.jsonschema.core.exceptions.ProcessingException: fatal: content at URI "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#" is not valid JSON
+    level: "fatal"
+    uri: "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#"
+    parsingMessage: "Unexpected character ('a' (code 97)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')"
+]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Schema to use cannot be null
-	at io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)
-	at io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)
-	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)
-	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
-	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+              <![CDATA[io.restassured.module.jsv.JsonSchemaValidationException: com.github.fge.jsonschema.core.exceptions.ProcessingException: fatal: content at URI "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#" is not valid JSON
+    level: "fatal"
+    uri: "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#"
+    parsingMessage: "Unexpected character ('a' (code 97)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')"
+
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:233)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:75)
+	at org.hamcrest.TypeSafeMatcher.matches(TypeSafeMatcher.java:65)
+	at org.hamcrest.Matcher$matches.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+	at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+	at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+	at groovy.lang.Closure.call(Closure.java:414)
+	at groovy.lang.Closure.call(Closure.java:430)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3202)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3172)
+	at org.codehaus.groovy.runtime.dgm$67.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+	at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:469)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:654)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:96)
+	at io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:255)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:268)
 	at assured1.assured_test.AssuredTests.schemas(AssuredTests.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -52,17 +106,37 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.github.fge.jsonschema.core.exceptions.ProcessingException: fatal: content at URI "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#" is not valid JSON
+    level: "fatal"
+    uri: "file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#"
+    parsingMessage: "Unexpected character ('a' (code 97)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')"
+
+	at com.github.fge.jsonschema.core.load.URIManager.getContent(URIManager.java:110)
+	at com.github.fge.jsonschema.core.load.SchemaLoader$1.load(SchemaLoader.java:115)
+	at com.github.fge.jsonschema.core.load.SchemaLoader$1.load(SchemaLoader.java:109)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+	at com.github.fge.jsonschema.core.load.SchemaLoader.get(SchemaLoader.java:172)
+	at com.github.fge.jsonschema.main.JsonValidator.buildJsonSchema(JsonValidator.java:210)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.getJsonSchema(JsonSchemaFactory.java:224)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:221)
+	... 79 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- io.restassured.module.jsv.JsonSchemaValidationException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- schemas -->
-        <test-method status="PASS" signature="specificdata()[pri:0, instance:assured1.assured_test.AssuredTests@523884b2]" name="specificdata" duration-ms="885" started-at="2018-04-05T17:14:23Z" finished-at="2018-04-05T17:14:24Z">
+        <test-method status="PASS" signature="specificdata()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="specificdata" duration-ms="851" started-at="2018-04-05T18:42:53Z" finished-at="2018-04-05T18:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- specificdata -->
-        <test-method status="PASS" signature="user()[pri:0, instance:assured1.assured_test.AssuredTests@523884b2]" name="user" duration-ms="188" started-at="2018-04-05T17:14:24Z" finished-at="2018-04-05T17:14:24Z">
+        <test-method status="PASS" signature="user()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="user" duration-ms="156" started-at="2018-04-05T18:42:54Z" finished-at="2018-04-05T18:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- user -->

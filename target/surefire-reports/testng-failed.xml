@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [My test suite]">
+  <test name="BackEnd Tests(failed)">
+    <classes>
+      <class name="assured1.assured_test.AssuredTests">
+        <methods>
+          <include name="schemas"/>
+        </methods>
+      </class> <!-- assured1.assured_test.AssuredTests -->
+    </classes>
+  </test> <!-- BackEnd Tests(failed) -->
+</suite> <!-- Failed suite [My test suite] -->

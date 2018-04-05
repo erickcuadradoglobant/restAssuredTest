@@ -31,34 +31,161 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">4.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">3.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">assured1.assured_test.AssuredTests</td><td><a href="#m1"><b>schemas</b>  </a></td><td class="numi">1</td><td>1522966462715</td><td class="numi">427</td></tr>
+<tr class="failedodd"><td rowspan="1">assured1.assured_test.AssuredTests</td><td><a href="#m1"><b>schemas</b>  </a></td><td class="numi">1</td><td>1522971773251</td><td class="numi">498</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="4">assured1.assured_test.AssuredTests</td><td><a href="#m2"><b>comment</b>  </a></td><td class="numi">1</td><td>1522966459542</td><td class="numi">1846</td></tr><tr class="passedodd"><td><a href="#m3"><b>responses200</b>  </a></td><td class="numi">1</td><td>1522966461389</td><td class="numi">1321</td></tr><tr class="passedodd"><td><a href="#m4"><b>specificdata</b>  </a></td><td class="numi">1</td><td>1522966463146</td><td class="numi">885</td></tr><tr class="passedodd"><td><a href="#m5"><b>user</b>  </a></td><td class="numi">1</td><td>1522966464034</td><td class="numi">188</td></tr>
+<tr class="passedodd"><td rowspan="3">assured1.assured_test.AssuredTests</td><td><a href="#m2"><b>comment</b>  </a></td><td class="numi">1</td><td>1522971771646</td><td class="numi">1602</td></tr><tr class="passedodd"><td><a href="#m3"><b>specificdata</b>  </a></td><td class="numi">1</td><td>1522971773752</td><td class="numi">851</td></tr><tr class="passedodd"><td><a href="#m4"><b>user</b>  </a></td><td class="numi">1</td><td>1522971774603</td><td class="numi">156</td></tr>
 </table>
 <h1>Default test</h1>
 <h2 id="m1">assured1.assured_test.AssuredTests:schemas</h2>
 <div style="padding-left:3em">
-<p>Schema to use cannot be null</p>
-io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)
-<br/>at io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)
-<br/>at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)
-<br/>at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
-<br/>at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+<p>com.github.fge.jsonschema.core.exceptions.ProcessingException: fatal: content at URI &quot;file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#&quot; is not valid JSON
+    level: &quot;fatal&quot;
+    uri: &quot;file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#&quot;
+    parsingMessage: &quot;Unexpected character (&apos;a&apos; (code 97)): expected a valid value (number, String, array, object, &apos;true&apos;, &apos;false&apos; or &apos;null&apos;)&quot;
+</p>
+io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:233)
+<br/>at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:75)
+<br/>at org.hamcrest.TypeSafeMatcher.matches(TypeSafeMatcher.java:65)
+<br/>at org.hamcrest.Matcher$matches.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+<br/>at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+<br/>at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+<br/>at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+<br/>at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+<br/>at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+<br/>at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+<br/>at groovy.lang.Closure.call(Closure.java:414)
+<br/>at groovy.lang.Closure.call(Closure.java:430)
+<br/>at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3202)
+<br/>at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3172)
+<br/>at org.codehaus.groovy.runtime.dgm$67.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
+<br/>at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+<br/>at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+<br/>at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+<br/>at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:469)
+<br/>at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:654)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+<br/>at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:96)
+<br/>at io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:255)
+<br/>at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:268)
+<br/>at assured1.assured_test.AssuredTests.schemas(AssuredTests.java:69)
+<br/>25 lines not shown
+<p>Caused by fatal: content at URI &quot;file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#&quot; is not valid JSON
+    level: &quot;fatal&quot;
+    uri: &quot;file:/C:/Users/erick.cuadrado/eclipse-workspace/assured-test/target/test-classes/#&quot;
+    parsingMessage: &quot;Unexpected character (&apos;a&apos; (code 97)): expected a valid value (number, String, array, object, &apos;true&apos;, &apos;false&apos; or &apos;null&apos;)&quot;
+</p>
+com.github.fge.jsonschema.core.load.URIManager.getContent(URIManager.java:110)
+<br/>at com.github.fge.jsonschema.core.load.SchemaLoader$1.load(SchemaLoader.java:115)
+<br/>at com.github.fge.jsonschema.core.load.SchemaLoader$1.load(SchemaLoader.java:109)
+<br/>at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524)
+<br/>at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317)
+<br/>at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280)
+<br/>at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195)
+<br/>at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+<br/>at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+<br/>at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+<br/>at com.github.fge.jsonschema.core.load.SchemaLoader.get(SchemaLoader.java:172)
+<br/>at com.github.fge.jsonschema.main.JsonValidator.buildJsonSchema(JsonValidator.java:210)
+<br/>at com.github.fge.jsonschema.main.JsonSchemaFactory.getJsonSchema(JsonSchemaFactory.java:224)
+<br/>at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:221)
+<br/>at io.restassured.module.jsv.JsonSchemaValidator.matchesSafely(JsonSchemaValidator.java:75)
+<br/>at org.hamcrest.TypeSafeMatcher.matches(TypeSafeMatcher.java:65)
+<br/>at org.hamcrest.Matcher$matches.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+<br/>at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+<br/>at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+<br/>at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+<br/>at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+<br/>at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
+<br/>at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1022)
+<br/>at groovy.lang.Closure.call(Closure.java:414)
+<br/>at groovy.lang.Closure.call(Closure.java:430)
+<br/>at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3202)
+<br/>at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3172)
+<br/>at org.codehaus.groovy.runtime.dgm$67.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
+<br/>at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+<br/>at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+<br/>at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+<br/>at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:469)
+<br/>at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:654)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+<br/>at java.lang.reflect.Method.invoke(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+<br/>at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:96)
+<br/>at io.restassured.specification.ResponseSpecification$content$0.callCurrent(Unknown Source)
+<br/>at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+<br/>at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:174)
+<br/>at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:255)
+<br/>at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:268)
 <br/>at assured1.assured_test.AssuredTests.schemas(AssuredTests.java:69)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m2">assured1.assured_test.AssuredTests:specificdata</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">assured1.assured_test.AssuredTests:responses200</h2>
+<h2 id="m3">assured1.assured_test.AssuredTests:user</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">assured1.assured_test.AssuredTests:user</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">assured1.assured_test.AssuredTests:comment</h2>
+<h2 id="m4">assured1.assured_test.AssuredTests:comment</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

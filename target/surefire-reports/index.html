@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,6 +107,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-My_test_suite" title="assured1.assured_test.AssuredTests" hash-for-method="responses200">responses200</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-My_test_suite" title="assured1.assured_test.AssuredTests" hash-for-method="schemas">schemas</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -153,6 +158,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="schemas">
+                  </a> <!-- schemas -->
+                  <span class="method-name">schemas</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="specificdata">
                   </a> <!-- specificdata -->
                   <span class="method-name">specificdata</span>
@@ -177,11 +189,11 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;My test suite&quot;&gt;
-  &lt;test name=&quot;My first test&quot;&gt;
+  &lt;test name=&quot;BackEnd Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;assured1.assured_test.AssuredTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- My first test --&gt;
+  &lt;/test&gt; &lt;!-- BackEnd Tests --&gt;
 &lt;/suite&gt; &lt;!-- My test suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,7 +205,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">My first test (1 class)</span>
+                <span class="test-name">BackEnd Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -219,28 +231,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'responses200')
+data.setCell(0, 1, 'schemas')
 data.setCell(0, 2, 'assured1.assured_test.AssuredTests')
-data.setCell(0, 3, 3532);
+data.setCell(0, 3, 1802);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'comment')
 data.setCell(1, 2, 'assured1.assured_test.AssuredTests')
-data.setCell(1, 3, 2101);
+data.setCell(1, 3, 1502);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'specificdata')
+data.setCell(2, 1, 'responses200')
 data.setCell(2, 2, 'assured1.assured_test.AssuredTests')
-data.setCell(2, 3, 968);
+data.setCell(2, 3, 1374);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'user')
+data.setCell(3, 1, 'specificdata')
 data.setCell(3, 2, 'assured1.assured_test.AssuredTests')
-data.setCell(3, 3, 336);
+data.setCell(3, 3, 1025);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'user')
+data.setCell(4, 2, 'assured1.assured_test.AssuredTests')
+data.setCell(4, 3, 159);
 window.suiteTableData['My_test_suite']= { tableData: data, tableDiv: 'times-div-My_test_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-My_test_suite">
               </div> <!-- times-div-My_test_suite -->
             </div> <!-- times-div -->
@@ -273,15 +289,19 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">responses200</span>
-                <span class="method-start">2104 ms</span>
+                <span class="method-start">1502 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">schemas</span>
+                <span class="method-start">2877 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">specificdata</span>
-                <span class="method-start">5637 ms</span>
+                <span class="method-start">4679 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">user</span>
-                <span class="method-start">6606 ms</span>
+                <span class="method-start">5704 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
