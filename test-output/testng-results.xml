@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3989" started-at="2018-04-05T17:50:31Z" finished-at="2018-04-05T17:50:35Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3989" started-at="2018-04-05T17:50:31Z" finished-at="2018-04-05T17:50:35Z">
+      <class name="assured1.assured_test.AssuredTests">
+        <test-method status="PASS" signature="comment()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="comment" duration-ms="1552" started-at="2018-04-05T12:50:31Z" finished-at="2018-04-05T12:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- comment -->
+        <test-method status="PASS" signature="responses200()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="responses200" duration-ms="1265" started-at="2018-04-05T12:50:32Z" finished-at="2018-04-05T12:50:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- responses200 -->
+        <test-method status="PASS" signature="specificdata()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="specificdata" duration-ms="973" started-at="2018-04-05T12:50:34Z" finished-at="2018-04-05T12:50:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- specificdata -->
+        <test-method status="PASS" signature="user()[pri:0, instance:assured1.assured_test.AssuredTests@6f7fd0e6]" name="user" duration-ms="178" started-at="2018-04-05T12:50:35Z" finished-at="2018-04-05T12:50:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user -->
+      </class> <!-- assured1.assured_test.AssuredTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
