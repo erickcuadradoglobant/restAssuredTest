@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="My test suite">
 
-	<test name="My first test">
+	<test name="BackEnd Tests">
 		<classes>
 			<class name="assured1.assured_test.AssuredTests"></class>
 		</classes>

@@ -5,9 +5,7 @@
     <classes>
       <class name="assured1.assured_test.AssuredTests">
         <methods>
-          <include name="specificdata"/>
-          <include name="comment"/>
-          <include name="user"/>
+          <include name="schemas"/>
         </methods>
       </class> <!-- assured1.assured_test.AssuredTests -->
     </classes>
